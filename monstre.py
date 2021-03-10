@@ -54,7 +54,7 @@ class Alien(Monstre):
         super().__init__(game,"alien",(300,300),150)
         self.vie =250
         self.vie_max=250
-        self.attack = 2
+        self.attack = 2# ATAQUE
 
 
 
