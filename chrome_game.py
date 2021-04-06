@@ -10,6 +10,12 @@ class AnimateSprite(pygame.sprite.Sprite):
         self.current_image = 0
         self.images = animations.get(sprite_name)
         self.animation = False
+        self.saut=0
+        self.saut_montee =0
+        self.saut_decente =5
+        self.nombre_de_saut=0
+        self.a_sauter = False
+
 
     def start_animation(self):
         self.animation = True
@@ -74,8 +80,12 @@ class jouer (AnimateSprite):
         self.rect.x -= self.vitesse
         self.start_animation()
     def sauter (self):
-        if self.rect.x <= 10000:
-         self.rect.y -= 10
+        if self.a_sauter:
+           if self.saut_montee >=10:
+             self.saut_decente == 1
+             self.saut = self.saut_decente
+           else:
+               self.saut_montee==
         self.image = pygame.image.load('image_chome/jouer2.png')
         if self.rect.y < 300:
          time.sleep(1)
